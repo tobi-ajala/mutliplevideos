@@ -8,27 +8,26 @@
 
   <div class="vidBox" id="contain">
 
-      <video id="video1" class="vid" muted controls="true" height="300" width="500">
-          <source src="http://jcath-drg.s3.amazonaws.com/BigBuck.m4v" type="video/mp4">
+      <video id="ad1" class="vid" autoplay muted controls="true" height="300" width="500">
+          <source src="http://cdn.http.anno.test.channel4.com/m/1/174055/78/1340110/CH4_31_02_50_GRY_BHFN133_040_001_93614_17.mp4" type="video/mp4">
       </video>
 
-      <video id="video2" class="vid2" autoplay style="display:none; width:400px; height:300px; background-color:#f0f0f0">
-        <source src="http://jcath-drg.s3.amazonaws.com/BigBuck.m4v" type="video/mp4">
-          <!--should appear after the video ends-->
+      <video id="ad2" class="vid2" muted controls="true" style="display:none;" height="300" width="500">
+        <source src="http://cdn.http.anno.test.channel4.com/m/1/174055/7/2047111/MUM-HATD170-020_1462888808_93626_17.mp4" type="video/mp4">
       </video>
 
   </div>
 
   <script>
-      var vid = document.getElementById('video1');
+      var vid = document.getElementById('ad1');
 
       vid.addEventListener("ended", hideVideo, false);
 
       function hideVideo() {
 
-          var vid = document.getElementById('video1');
+          var vid = document.getElementById('ad1');
 
-          var vid2 = document.getElementById('video2');
+          var vid2 = document.getElementById('ad2');
 
           vid.removeEventListener("ended", hideVideo, false);
 
